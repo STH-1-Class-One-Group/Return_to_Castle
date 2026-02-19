@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sora:wght@100..800&display=swap');
+
+@theme {
+  --font-display: "Newsreader", serif;
+  --font-sans: "Sora", sans-serif;
+  --color-primary: #ea2a33;
+  --color-background-light: #f8f6f6;
+  --color-background-dark: #120c0c;
+  --color-stone-950: #1a1616;
+  --color-stone-900: #262121;
+}
+
+@layer base {
+  body {
+    @apply font-display bg-background-dark text-slate-100 selection:bg-primary selection:text-white;
+  }
+}
+
+@layer components {
+  .sans-font {
+    @apply font-sans;
+  }
+
+  .drop-cap::first-letter {
+    float: left;
+    font-size: 5rem;
+    line-height: 4rem;
+    padding-top: 4px;
+    padding-right: 12px;
+    padding-left: 3px;
+    color: #ea2a33;
+    font-weight: 800;
+  }
+
+  .texture-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB-TK4lWTamyI8eqSXUSoBxiQPQYA_rYPWKNJrzQK54RJ9U842ktW0iRr6JQmbPbR8AAD-Hj7wNCb13XObdG5ZlaklmK7oblQNXp-vB4OBOGKDvDxQUAHNH1beusqLi4T1N0IJPzEnVDO3jDOqz669mx8QYuWJ3YozYtl46P34KuQRD21gSgxV5O_45a1-ZBJoryCxbjkDdGKf0NFAwo0Fj8hgHz67G7AYhn_TcYIgzLK3iaJCo3uIgW6Pdq7m5M9ziUtA8tRjkFtM);
+    opacity: 0.1;
+  }
+}
